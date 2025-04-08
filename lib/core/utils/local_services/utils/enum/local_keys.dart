@@ -1,5 +1,5 @@
 enum LocalKeys {
-  wallets("wallets");
+  memories("memories");
 
   final String value;
   const LocalKeys(this.value);
