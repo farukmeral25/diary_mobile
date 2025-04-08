@@ -1,5 +1,4 @@
 import 'package:diary_mobile/core/constant/app_constants.dart';
-import 'package:diary_mobile/core/constant/app_page_routes.dart';
 import 'package:diary_mobile/core/constant/theme/app_colors.dart';
 import 'package:diary_mobile/core/init/injection_container.dart' as locator;
 import 'package:diary_mobile/core/utils/screen_size.dart';

@@ -44,8 +44,12 @@ class HomePage extends StatelessWidget {
                             child: PageView.builder(
                               itemCount: memory.imagePaths.length,
                               itemBuilder: (context, imageIndex) {
+                                final file = File(memory.imagePaths[imageIndex]);
+                                if (!file.existsSync()) {
+                                  return const Center(child: Text('Resim bulunamadı'));
+                                }
                                 return Image.file(
-                                  File(memory.imagePaths[imageIndex]),
+                                  file,
                                   fit: BoxFit.cover,
                                 );
                               },
