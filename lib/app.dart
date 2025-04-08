@@ -17,6 +17,7 @@ class DiaryApp extends StatelessWidget {
       navigatorKey: AppKeys.navigatorKey,
       scaffoldMessengerKey: AppKeys.scaffoldMessengerKey,
       onGenerateRoute: AppPageRoutes.onGenerateRoute,
+      initialRoute: AppPageRoutes.splash.value,
     );
   }
 }

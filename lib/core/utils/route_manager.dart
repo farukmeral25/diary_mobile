@@ -5,9 +5,7 @@ import 'package:diary_mobile/core/keys/app_keys.dart';
 class RouteManager {
   static final RouteManager _instance = RouteManager._internal();
 
-  factory RouteManager() {
-    return _instance;
-  }
+  factory RouteManager() => _instance;
 
   RouteManager._internal();
 
