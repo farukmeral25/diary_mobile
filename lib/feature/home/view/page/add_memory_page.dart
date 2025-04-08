@@ -58,7 +58,7 @@ class AddMemoryPage extends StatelessWidget {
                     ),
                     if (provider.selectedImages.isNotEmpty)
                       Padding(
-                        padding: EdgeInsets.only(top: 8.0),
+                        padding: const EdgeInsets.only(top: 8.0),
                         child: Text(
                           '${provider.selectedImages.length} resim seçildi',
                           textAlign: TextAlign.center,

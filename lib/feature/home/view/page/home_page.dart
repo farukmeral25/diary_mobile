@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:diary_mobile/core/constant/theme/app_colors.dart';
 import 'package:diary_mobile/core/utils/screen_size.dart';
 import 'package:diary_mobile/feature/home/provider/home_provider.dart';
-import 'package:get_it/get_it.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
