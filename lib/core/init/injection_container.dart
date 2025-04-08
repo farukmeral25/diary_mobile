@@ -1,5 +1,7 @@
 import 'package:diary_mobile/core/utils/image/i_image_service.dart';
 import 'package:diary_mobile/core/utils/image/image_service.dart';
+import 'package:diary_mobile/feature/home/provider/add_memory_provider.dart';
+import 'package:diary_mobile/feature/home/provider/home_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:diary_mobile/core/utils/device_manager.dart';
@@ -26,4 +28,7 @@ Future<void> init() async {
 
   // Image Service
   sl.registerLazySingleton<IImageService>(() => ImageService());
+
+  sl.registerLazySingleton<HomeProvider>(() => HomeProvider());
+  sl.registerFactory<AddMemoryProvider>(() => AddMemoryProvider());
 }

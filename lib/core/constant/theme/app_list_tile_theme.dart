@@ -8,6 +8,6 @@ class AppListTileTheme {
     titleTextStyle: AppTextStyles.px14w500,
     subtitleTextStyle: AppTextStyles.px10w400.copyWith(color: AppColors.foregroundTertiary),
     contentPadding: REdgeInsets.symmetric(horizontal: 16),
-    visualDensity: VisualDensity(vertical: -4),
+    visualDensity: const VisualDensity(vertical: -4),
   );
 }
