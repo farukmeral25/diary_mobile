@@ -37,17 +37,34 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      SizedBox(
-                        height: ScreenSize().getHeight(200),
-                        child: PageView.builder(
-                          itemCount: memory.imagePaths.length,
-                          itemBuilder: (context, imageIndex) {
-                            return Image.file(
-                              File(memory.imagePaths[imageIndex]),
-                              fit: BoxFit.cover,
-                            );
-                          },
-                        ),
+                      Stack(
+                        children: [
+                          SizedBox(
+                            height: ScreenSize().getHeight(200),
+                            child: PageView.builder(
+                              itemCount: memory.imagePaths.length,
+                              itemBuilder: (context, imageIndex) {
+                                return Image.file(
+                                  File(memory.imagePaths[imageIndex]),
+                                  fit: BoxFit.cover,
+                                );
+                              },
+                            ),
+                          ),
+                          Positioned(
+                            top: 8,
+                            right: 8,
+                            child: Opacity(
+                              opacity: 0.7,
+                              child: IconButton(
+                                icon: Icon(Icons.delete, color: AppColors.white),
+                                onPressed: () {
+                                  provider.removeMemory(index);
+                                },
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       Padding(
                         padding: EdgeInsets.all(ScreenSize().getWidth(16)),

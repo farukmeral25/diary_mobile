@@ -19,6 +19,12 @@ class HomeProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  void removeMemory(int index) {
+    _memories.removeAt(index);
+    _saveMemories();
+    notifyListeners();
+  }
+
   Future<void> _saveMemories() async {
     try {
       final memoryJsonList = _memories.map((memory) => memory.toJson()).toList();
