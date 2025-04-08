@@ -1,10 +1,12 @@
-import 'package:diary_mobile/feature/home/home_page.dart';
+import 'package:diary_mobile/feature/home/view/page/add_memory_page.dart';
+import 'package:diary_mobile/feature/home/view/page/home_page.dart';
 import 'package:diary_mobile/feature/splash/view/page/splash_page.dart';
 import 'package:flutter/material.dart';
 
 enum AppPageRoutes {
   splash(page: SplashPage()),
-  home(page: HomePage());
+  home(page: HomePage()),
+  addMemory(page: AddMemoryPage());
 
   final Widget page;
 
@@ -22,8 +24,6 @@ extension AppPageRoutesExtension on AppPageRoutes {
     switch (this) {
       case AppPageRoutes.splash:
         return '/';
-      case AppPageRoutes.home:
-        return '/home';
       default:
         return name;
     }
